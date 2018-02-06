@@ -1,5 +1,5 @@
 help:
-	@echo "[STEP1 OP1] make toolchain_download && source intall_toolchain.sh"
+	@echo "[STEP1 OP1] make toolchain_download && source install_toolchain.sh"
 	@echo "[STEP1 OP2] make prebuild_toolchain_download"
 	@echo "[STEP2] make tools_download && source install_tools.sh"
 	@echo "[STEP3] make vmlinux-build"
@@ -16,7 +16,7 @@ prebuild_toolchain_download:
 	@echo "++ Run '. environment.sh' or add manually to your PATH:"
 	@echo '++    export PATH=`pwd`/toolchains/or1k-elf/bin:$${PATH}'
 
-toolchian_download:
+toolchain_download:
 	git clone https://github.com/openrisc/or1k-src.git or1k-src
 	git clone https://github.com/openrisc/or1k-gcc.git or1k-gcc
 	@echo "++++++++++++++++++++++++++++++++++++++++++++++"
