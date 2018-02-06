@@ -18,6 +18,8 @@ Up-to-data flow for booting kernel with openrisc on de0_nano board.
 
 * Bootup kernel on real hardware DE0-NANO
 
+* Just type make at root dir will print all commands.
+
 * [General tutorial for toolchain](https://github.com/openrisc/tutorials)
 
 ### How do I get set up? ###
@@ -65,3 +67,10 @@ Please make sure $PREFIX is already there and already chown to $USER.
 
 * Simulate Kernel by or1ksim
   make vmlinux-sim
+
+* Compile and build FPGA SOF which will load to DE0_NANO evaluation board:
+  make fpga-build
+
+* Connect DE0_NANO evaluation board to computer through USB.
+  Download FPGA SOF to hardware:
+  make fpga-download
