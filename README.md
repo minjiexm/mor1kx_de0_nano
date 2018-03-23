@@ -2,6 +2,13 @@
 
 Up-to-data flow for booting kernel with openrisc on de0_nano board.
 
+### Env Requirment ###
+Ubuntu 16.4
+
+### Command to setup ###
+* make : this will show all the predefined commands.
+* suggest use option1 to start install toolchains.
+
 ### What is this repository for? ###
 
 * Download and install all or1k toolchain submodules.
@@ -17,8 +24,6 @@ Up-to-data flow for booting kernel with openrisc on de0_nano board.
 * Bootup kernel on simulator (or1ksim)
 
 * Bootup kernel on real hardware DE0-NANO
-
-* Just type make at root dir will print all commands.
 
 * [General tutorial for toolchain](https://github.com/openrisc/tutorials)
 
@@ -60,17 +65,9 @@ Please make sure $PREFIX is already there and already chown to $USER.
     make tools_download
     source install_tools.sh
     For mor1kx install please refer https://github.com/juliusbaxter/mor1kx-dev-env/wiki/OpenRISC-tool-chain-installation-guide
-
-* Build vmlinux
-    make vmlinux-build
-    This command will compile and generate a kernel file called vmlinux under linux diretory.
+    [NOTE] In this step, it will also auto compile a linux kernel.
+           If don't want to auto compile linux, please comment out last few lines in install_tools.sh and type "make vmlinux-build" manully.
 
 * Simulate Kernel by or1ksim
   make vmlinux-sim
-
-* Compile and build FPGA SOF which will load to DE0_NANO evaluation board:
-  make fpga-build
-
-* Connect DE0_NANO evaluation board to computer through USB.
-  Download FPGA SOF to hardware:
-  make fpga-download
+  
