@@ -6,6 +6,7 @@ Up-to-data flow for booting kernel with openrisc on de0_nano board.
 Ubuntu 16.4
 
 ### Command to setup ###
+* use tcsh and source setup.sh at first.
 * make : this will show all the predefined commands.
 * suggest use option1 to start install toolchains.
 
